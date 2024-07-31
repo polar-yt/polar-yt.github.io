@@ -1,0 +1,246 @@
+/* Font Imports (Google Fonts) */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Main Styles */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(90deg, rgb(100, 149, 237), rgb(8, 24, 168));
+    scroll-behavior: smooth;
+    display: grid;
+    grid-template-areas:
+    "nav"
+    "content"
+    "stack"
+    "progress"
+}
+* {
+    box-sizing: border-box;
+}
+
+/* Text Styles */
+
+a,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+h2 {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 50px;
+}
+.name {
+    font-size: 2rem;
+    margin: 1rem;
+    margin-left: 6rem;
+    font-family: "Poppins";
+    font-weight: 600;
+}
+/* Wrapper */
+
+.wrapper {
+    width: 700px;
+    font-family: "Poppins";
+    font-weight: 300;
+    font-size: 20px;
+}
+
+/* Navigation Bar Styles */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    color: black;
+}
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar-links li {
+    list-style: none;
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 20px;
+}
+.navbar-links li {
+    margin: 1rem;
+    margin-right: 4rem;
+}
+.navbar-links a {
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+    display: block;
+}
+.navbar-link {
+    position: relative;
+    transition: all 0.4s;
+}
+.navbar-link::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: black;
+    display: block;
+    opacity: 0;
+    transition: all ease 0.5s;
+    pointer-events: none;
+}
+.navbar-link:hover::after {
+    opacity: 1;
+}
+
+/* Banner */
+
+.page-area {
+    width: 100%;
+    height: 65vh;
+}
+.page-content {
+    margin: 90px;
+}
+.gradient-text {
+    background: linear-gradient(90deg, rgb(8, 24, 168), rgb(100, 149, 237));
+    background-clip: text;
+    color: transparent;
+}
+.btn-github {
+    color: black;
+    background-color: white;
+    border-radius: 3vh;
+    padding: 7px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+    width: 30px;
+    height: 20px;
+    font-family: "Poppins";
+    font-weight: 300;
+    font-size: 3vh;
+    border-style: hidden;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+.btn-github:hover {
+    box-shadow: rgba(0, 0, 0, 0.2);
+    transform: translateY(0.4vh);
+}
+.btn-github:active {
+    transform: scale(0.97);
+    box-shadow: none;
+}
+.btn-discord {
+    color: black;
+    background-color: white;
+    border-radius: 3vh;
+    padding: 7px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+    width: 31vh;
+    height: 7vh;
+    font-family: "Poppins";
+    font-weight: 300;
+    font-size: 3vh;
+    border-style: hidden;
+}
+/* Stack */
+
+.stack-container {
+    display: grid;
+    grid-template-columns: 11% 11% 11% 11% 11% 11%;
+    justify-content: center;
+    margin: 40px;
+    gap: 50px;
+}
+.javascript-container {
+    margin-top: 10px;
+}
+.github-container {
+    margin-top: 10px;
+}
+
+.html,
+.css,
+.javascript,
+.git,
+.github,
+.vsc {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 65% 35%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.361);
+    border-radius: 6%;
+}
+.stack-names {
+    font-family: "Poppins";
+    font-size: 24px;
+    font-weight: 300;
+}
+.stack-header {
+    font-family: "Poppins";
+    font-size: 35px;
+    font-weight: 450;
+    text-align: center;
+    display: block;
+}
+.stack-header {
+    margin: 30px;
+}
+
+/* Skills */
+
+p {
+    font-size: 20px;
+    font-family: "Poppins";
+    font-weight: 400;
+}
+.root-container {
+    margin: 90px;
+}
+.progress-container {
+    background-color: white;
+    width: 55%;
+    border-radius: 15px;
+}
+.skill-html,
+.skill-css,
+.skill-js,
+.skill-git {
+    background: linear-gradient(90deg, rgb(8, 24, 168), rgb(100, 149, 237));
+    color: black;
+    padding: 1%;
+    text-align: right;
+    font-size: 20px;
+    border-radius: 12px;
+    font-family: "Poppins";
+    font-weight: 300;
+}
+.skill-html {
+    width: 55%;
+}
+.skill-css {
+    width: 50%;
+}
+.skill-js {
+    width: 10%;
+}
+.skill-git {
+    width: 5%;
+}
+.skill-header {
+    font-size: 35px;
+    font-weight: 450;
+    font-family: "Poppins";
+    display: block;
+}
